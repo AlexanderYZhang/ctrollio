@@ -1,0 +1,65 @@
+body {
+  perspective: 1000px; /* for spinning text */
+}
+
+#wrapper{
+  width: 100%; 
+  height: 100%;
+  background: red;
+}
+
+#canvas{
+  width: 100%;
+  height: 100%;
+/*  background: blue;*/
+  
+  background: linear-gradient(270deg, #39d5ad, #a439d5);
+  background-size: 400% 400%;
+
+  -webkit-animation: BgGradientTransition 30s ease infinite;
+  -moz-animation: BgGradientTransition 30s ease infinite;
+  animation: BgGradientTransition 30s ease infinite;
+}
+
+  #spinner {
+    position: fixed;
+    bottom: 50vh;
+    left: 25vw;
+    font-size: 2em;
+    text-align: center;
+    animation-name: spin, depth;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+
+/* spinning text animation */
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(-360deg); }
+}
+@keyframes depth {
+  0% { text-shadow: 0 0 black; }
+  25% { text-shadow: 1px 0 black, 2px 0 black, 3px 0 black, 4px 0 black, 5px 0 black; }
+  50% { text-shadow: 0 0 black; }
+  75% { text-shadow: -1px 0 black, -2px 0 black, -3px 0 black, -4px 0 black, -5px 0 black; }
+  100% { text-shadow: 0 0 black; }
+}
+
+
+/* bg color animations */
+@-webkit-keyframes BgGradientTransition {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes BgGradientTransition {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes BgGradientTransition { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
