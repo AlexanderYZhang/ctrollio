@@ -96,13 +96,13 @@
     function changeText() {
       const passionateQuotes = getPassionateQuotes();
       const quotes = [
-        "cmd + ctrl + space brings up the emoji tray",
-        "I took a class with Peter Singer",
-        "Never split the difference",
-        "Do you want to see my Disney Pins?",
-        "This is just a job, take care of yourself please",
-        "What do you think you should do",
-        "This is a good question for dev q&a!",
+        "CMD + CTRL + SPACE BRINGS UP THE EMOJI TRAY",
+        "I TOOK A CLASS WITH PETER SINGER",
+        "NEVER SPLIT THE DIFFERENCE",
+        "DO YOU WANT TO SEE MY DISNEY PINS?",
+        "THIS IS JUST A JOB, TAKE CARE OF YOURSELF PLEASE",
+        "WHAT DO YOU THINK YOU SHOULD DO?",
+        "THIS IS A GOOD QUESTION FOR DEV Q&A!",
       ];
       const allQuotes = passionateQuotes.concat(quotes);
       const randomNumber = getRandomNumberInRange(0, allQuotes.length);
@@ -114,8 +114,8 @@
     }
 
     function getPassionateQuotes() {
-      const quote = "You seem passionate about this project ";
-      const names = ["Jason", "Auggie", "Alex", "Karen L", "Karen Z", "Miyeon", "Jennifer", "Jonathan", "Cole", "Ruchi", "Niki", "Rachel"];
+      const quote = "YOU SEEM PASSIONATE ABOUT THIS PROJECT, ";
+      const names = ["JASON", "AUGGIE", "ALEX", "KAREN L", "KAREN Z", "MIYEON", "JENNIFER", "JONATHAN", "COLE", "RUCHI", "NIKI", "RACHEL"];
       const num = getRandomNumberInRange(0, names.length);
       return names.map(name => { return quote + name; })
     }
