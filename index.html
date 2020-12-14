@@ -3,6 +3,7 @@
 <head>
   <title>ctrollio</title>
   <link rel="icon" type="image/png" href="/favicon.png" />
+  
 
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -85,7 +86,7 @@
       $(".chris").marqueeify({
         speed: 300,
         bumpEdge: function () {
-          var random_num = getRandomNumberInRange(1, 20);
+          var random_num = getRandomNumberInRange(1, 30);
           var src = "images/chris_" + random_num + ".png";
           $(".chris").attr("src", src);
           changeText();
